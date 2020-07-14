@@ -1,2 +1,1 @@
-# playcanvas-demo
-PlayCanvas Demo
+# PlayCanvas Demo
