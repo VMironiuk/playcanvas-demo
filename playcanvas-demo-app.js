@@ -21,3 +21,11 @@ var box = new pc.Entity();
 box.addComponent("model", {type: "box"});
 app.root.addChild(box);
 box.rotate(10, 15, 0);
+
+// Lights
+var light = new pc.Entity();
+light.addComponent("light");
+app.root.addChild(light);
+light.rotate(45, 0, 0);
+
+app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
