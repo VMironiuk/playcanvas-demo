@@ -57,3 +57,12 @@ var coneMaterial = new pc.PhongMaterial();
 coneMaterial.diffuse.set(0.9, 0.9, 0.9);
 coneMaterial.update();
 cone.model.model.meshInstances[0].material = coneMaterial;
+
+// Create animation
+var timer = 0;
+app.on("update", function (deltaTime) {
+    timer += deltaTime;
+    box.rotate(deltaTime*10, deltaTime*20, deltaTime*30);
+    cylinder.setLocalScale(1, Math.abs(Math.sin(timer)), 1);
+    cone.setPosition(2, Math.sin(timer*2), 0);
+});
